@@ -1,0 +1,394 @@
+/* reset { */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+    font-size: 100%;
+}
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust:     100%;
+}
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+
+    color: #f00;
+}
+a:hover,
+a:active {
+    outline: 0;
+
+    color: #d00;
+}
+ul {
+    list-style-type: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+table td {
+    padding: 1px;
+}
+td,
+td img {
+    vertical-align: top;
+}
+table.middle td,
+table.middle td img {
+    vertical-align: middle;
+}
+input, select, button, textarea {
+    margin: 0;
+
+    font-size: 100%;
+}
+input[type="text"],
+input[type="password"],
+textarea {
+    outline: 0;
+}
+input:invalid {
+    border-color: #ccc !important;
+
+    -webkit-box-shadow: none !important;
+    box-shadow:         none !important;
+}
+input, textarea {
+    color: #000;
+}
+input[type="checkbox"] {
+    vertical-align: bottom;
+}
+input[type="radio"] {
+    vertical-align: text-bottom;
+}
+
+body {
+    margin:  0;
+    padding: 0;
+
+    background-color: #fff;
+    color:            #333;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:   12px;
+    line-height: 16px;
+}
+
+p {
+    margin:  0;
+    padding: 0;
+}
+
+#wrap {
+    width:  1200px;
+    height: auto !important;
+    margin: 0 auto;
+
+    position: relative;
+}
+
+:focus {
+    outline: 0;
+}
+
+.clearfix
+{
+    *zoom: 1;
+}
+
+.clearfix::before,
+.clearfix::after
+{
+    display: table;
+
+    content: "";
+
+    line-height: 0;
+}
+
+.clearfix::after
+{
+    clear: both;
+}
+
+h3 {
+    color: #E31E24;
+    font-size: 18px;
+    font-weight: bold;
+}
+/******  header  **********/
+
+#header {
+    padding-top:    10px;
+    padding-bottom: 10px;
+}
+
+.header-logo-l {
+    float: left;
+
+    width:  293px;
+    height: 66px;
+}
+
+.header-logo-r {
+    float: right;
+
+    border-left: 1px solid #ececec;
+
+    font-size:   16px;
+    font-weight: 700;
+
+    text-align:     left;
+    line-height:    1px;
+    vertical-align: middle;
+
+    color: #000;
+
+    min-height:    40px;
+    padding-left:  20px;
+    padding-right: 20px;
+}
+
+.header-logo-r p {
+    color: #999;
+
+    padding: 9px;
+}
+
+.header-logo-c {
+    height:       64px;
+    margin-left:  318px;
+    margin-right: 300px;
+}
+
+.header-logo-c p {
+    color: #E31E24;
+
+    line-height: 1px;
+    font-size:   15px;
+    font-weight: bold;
+
+    margin:       0 0 10px;
+    padding-top:  20px;
+    padding-left: 15px;
+}
+
+.header-logo-c-hotphone {
+    display: block;
+    float:right;
+    font-size: 14px;
+    margin-top: 13px;
+    margin-right:10px;
+}
+
+.header-logo-c-hotphone b {
+    display: block;
+    color: #f00;
+    font-size: 24px;
+    font-weight: 300;
+    margin-top: 7px;
+}
+
+.header-logo-l a img {
+    border: 0;
+}
+
+/******  Header MENU **********/
+.header-menu {
+    height:     40px;
+    margin-top: 10px;
+}
+
+.header-menu-ssil {
+    list-style:none;
+    padding:0;
+    width:781px;
+    position:relative;
+    margin: 0 auto;
+}
+
+.header-menu-ssil > li {
+    float: left;
+
+    border-left: 1px solid #E34358;
+
+    position: relative;
+    z-index:  1;
+    left:    -10px;
+
+    text-align:  center;
+    line-height: 30px;
+
+    max-width: 130px;
+    height:    30px;
+    margin:    0;
+    padding:   0 10px;
+}
+
+.header-menu-ssil > li.first {
+    border-left-color: transparent;
+}
+
+.header-menu-ssil > li.current a {
+    color: #c5c6c6;
+}
+
+.header-menu-ssil > li a {
+    text-decoration: none;
+    color: #e34358;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.header-menu-ssil > li a:hover {
+    color: #c5c6c6;
+}
+
+.header-menu-ssil > li.active-wrap a {
+    color: #888;
+}
+
+.header-menu-ssil > li.active-wrap a:hover,
+.header-menu-ssil > li.active-wrap a:active {
+    color: #666;
+}
+
+.header-menu-ssil ul {
+    display: none;
+    margin-left: -10px;
+    padding:      5px 10px;
+
+    position: absolute;
+    top:      30px;
+
+    z-index: 950;
+
+    background: #fff;
+    border:     1px solid #E34358;
+
+    -webkit-border-radius: 5px;
+    border-radius:         5px;
+
+    white-space: nowrap;
+}
+
+.header-menu-ssil > li {
+    position: relative;
+    z-index: 100;
+}
+
+.header-menu-ssil > li:hover ul {
+    display: block;
+}
+/******  Header knopki **********/
+
+.header-knopki-ssil {
+    list-style:none;
+    padding:0;
+    width:832px;
+    overflow:hidden;
+    position:relative;
+    z-index:1;
+    margin: 0 auto;
+}
+
+.header-knopki-ssil li {
+    float: left;
+
+    position: relative;
+    z-index:  1;
+
+    text-align: center;
+
+    border-top:    1px solid #f5a9ac;
+    border-bottom: 1px solid #e73e43;
+
+    background-color: #e31e24;
+    background-image: -moz-linear-gradient(top, #ee777a, #e31e24);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ee777a), to(#e31e24));
+    background-image: -webkit-linear-gradient(top, #ee777a, #e31e24);
+    background-image: -o-linear-gradient(top, #ee777a, #e31e24);
+    background-image: linear-gradient(to bottom, #ee777a, #e31e24);
+    background-repeat: repeat-x;
+    filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEE777A', endColorstr='#FFE31E24', GradientType=0)";
+
+    -webkit-border-radius: 6px;
+    border-radius:         6px;
+
+    line-height: 36px;
+
+    width:  202px;
+    height: 36px;
+    margin: 0 8px 0 0;
+}
+
+.header-knopki-ssil li.active-wrap {
+    background: #ca171d;
+
+    border-top-color:    #f01e25;
+    border-bottom-color: #f01e25;
+}
+
+.header-knopki-ssil li .icon-left,
+.header-knopki-ssil li .icon-right {
+    background: transparent url(../../img/frontend/icon-header-menu.png) 0 0 no-repeat;
+
+    display: block;
+    width:   24px;
+    height:  18px;
+
+    position: absolute;
+
+    top: 9px;
+}
+
+.header-knopki-ssil li .icon-left {
+    left: 8px;
+}
+
+.header-knopki-ssil li .icon-right {
+    right: 8px;
+
+    background-position: 0 -36px;
+}
+
+.header-knopki-ssil li.last {
+    margin-right: 0;
+}
+
+.header-knopki-ssil li a {
+    text-decoration: none;
+    color: #fefefe;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.header-knopki-ssil li a:hover {
+    text-decoration: underline;
+}
+
+.hidden
+{
+    display: none;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}

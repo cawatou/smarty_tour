@@ -1,0 +1,52 @@
+.modal-backdrop
+{
+    background-color: #fff;
+}
+
+.b-left-side,
+.b-right-side,
+.site-footer,
+#header,
+.c-tour-button,
+.c-tour-button_pasprt,
+.search-hotel-tours
+{
+    display: none;
+}
+
+#content
+{
+    margin: 0;
+}
+
+#b-center-side
+{
+    width:  650px;
+    margin: 25px 0 0;
+}
+
+.c-tour-tabl-wapk th,
+.c-tour-tabl-wapk-low
+{
+    background-color: #ddd;
+}
+
+#c-tour-photo-skidka
+{
+    visibility: hidden;
+}
+
+#c-tour-price-old
+{
+    text-decoration: line-through;
+}
+
+#c-tour-price-line
+{
+    display: none;
+}
+
+.print-unstrike
+{
+    text-decoration: none !important;
+}

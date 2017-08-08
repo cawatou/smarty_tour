@@ -1,0 +1,19 @@
+.title-state-success,
+.title-state-error {
+    display: none !important;
+}
+
+.hotel-title-state-success .title-state-success,
+.hotel-title-state-error .title-state-error {
+    display: inline-block !important;
+}
+
+.title-state-success,
+.title-state-success:before {
+    color: #3c763d !important;
+}
+
+.title-state-error,
+.title-state-error:before {
+    color: #a94442 !important;
+}

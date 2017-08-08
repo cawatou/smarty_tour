@@ -1,0 +1,1 @@
+{$blocks['SIDEBAR_RIGHT'].banner}

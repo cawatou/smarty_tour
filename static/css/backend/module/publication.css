@@ -1,0 +1,7 @@
+.thumbnail-list {
+    overflow: hidden;
+}
+
+.thumbnail-list .thumbnail {
+    margin: 10px 10px 0 0;
+}

@@ -1,0 +1,45 @@
+.container-files .thumb {
+    float: right;
+    position: relative;
+}
+
+.container-files .thumb img {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -4px;
+    right: -5px;
+}
+	
+.container-files table td {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.container-files table td label {
+    font-weight: normal;
+}
+
+.js-files-checkbox-toggle {
+    float: left;
+}
+
+.stupidtable-sorting {
+    color: #0088CC;
+    cursor: pointer;
+}
+
+.stupidtable-sorting .asc,
+.stupidtable-sorting .desc {
+    display: none;
+}
+
+.sorting-desc .desc,
+.sorting-asc .asc {
+    display: inline;
+}
+
+span.filename {
+    border-bottom: 1px dotted #CCC;
+    cursor: pointer;
+}

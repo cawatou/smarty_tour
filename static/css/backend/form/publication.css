@@ -1,0 +1,7 @@
+.thumbnail-list .thumbnail .btn-primary {
+    display: none;
+}
+
+.thumbnail-list .thumbnail:hover .btn-primary {
+    display: inline-block;
+}

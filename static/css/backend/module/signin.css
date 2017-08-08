@@ -1,0 +1,64 @@
+.body-signin {
+    background: url(../../../img/backend/background.png) 0 0;
+}
+
+/* cms-signin { */
+.cms-signin {
+    color: #999;
+    width: 500px;
+    height: 200px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -250px;
+}
+
+.cms-signin-container {
+    width: 500px;
+    height: 200px;
+    position: relative;    
+}
+
+.cms-signin form {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 250px;
+    border-right: 1px solid #454545;
+    height: 200px;
+    padding: 0 30px 0 0;
+}
+.cms-signin .text {
+    position: absolute;
+    left: 250px;
+    top: 0;
+    width: 250px;
+    height: 200px;
+    padding: 20px 0 0 30px;
+}
+
+.cms-signin .text p {
+    margin-bottom: 10px;
+}
+
+.cms-signin .text a {
+    color: #999;
+    text-decoration: underline;
+}
+
+.cms-signin .text a:hover {
+    text-decoration: none;
+}
+
+.cms-signin .error { 
+    color: #DF3E7B; 
+}
+
+.cms-signin .success { 
+    color: #197EA7; 
+}
+
+.cms-signin label {
+    font-weight: normal;
+}

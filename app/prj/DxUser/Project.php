@@ -1,0 +1,105 @@
+<?php
+
+DxFactory::import('DxUser');
+
+class DxUser_Project extends DxUser
+{
+    const ROLE_ANONYMOUS = 'ANONYMOUS';
+    const ROLE_ADMIN     = 'ADMIN';
+    const ROLE_DEVELOPER = 'DEVELOPER';
+
+    /** @var DomainObjectController_User|null */
+    protected $user = null;
+
+    /**
+     * @param string $name
+     * @param array  $arguments
+     * @return mixed
+     * @throws DxException
+     */
+
+    public function __call($name, $arguments = array())
+    {
+        if (is_null($this->user)) {
+            return null;
+        } else {
+            if ($this->user->isMethodExists($name)) {
+                $o = $this->user;
+            } else {
+                throw new DxException('Unknown method call');
+            }
+
+            if (empty($arguments)) {
+                return $o->$name();
+            } else {
+                return $o->$name($arguments[0]);
+            }
+        }
+    }
+
+    /**
+     * @param null|int $user_id
+     * @return DxUser_Project
+     */
+    public function __construct($user_id = null)
+    {
+        if ($user_id === null) {
+            $this->setRole(self::ROLE_ANONYMOUS);
+        } else {
+            /** @var $q  DomainObjectQuery_User */
+            $q = DxFactory::getInstance('DomainObjectQuery_User');
+
+            if (!($u = $q->findById($user_id))) {
+                $this->setRole(self::ROLE_ANONYMOUS);
+            } else {
+                if ($u->getStatus() == 'ENABLED') {
+                    $u->setVisited();
+                    $u->setIp(empty($_SERVER['REMOTE_ADDR']) ? '0.0.0.0' : $_SERVER['REMOTE_ADDR']);
+                    $u->save();
+
+                    $this->setRole($u->getRole());
+                    $this->setUser($u);
+                } else {
+                    $this->setRole(self::ROLE_ANONYMOUS);
+                }
+            }
+        }
+    }
+
+    /**
+     * @param array $roles
+     * @return bool
+     */
+    public function isUserInRoles($roles = array())
+    {
+        if (empty($roles)) {
+            return true;
+        }
+        $roles = (array)$roles;
+        return in_array($this->getRole(), $roles);
+    }
+
+    /**
+     * @param DomainObjectController_User $u
+     */
+    public function setUser($u)
+    {
+        $this->user = $u;
+    }
+
+    /**
+     * @return DomainObjectController_User|null
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isDeveloper()
+    {
+        return $this->isUserInRoles(array(self::ROLE_DEVELOPER));
+    }
+}

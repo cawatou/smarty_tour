@@ -1,0 +1,149 @@
+.product-departure-component .row-attr {
+    margin-bottom: 20px;
+}
+
+.product-departure-component .row-attr:last-child {
+    margin-bottom: 0;
+}
+
+.product-departure-component .row-attr .product-departure-price-wrapper,
+.product-departure-component .row-attr .input-type-hotel-wrapper {
+    position: relative;
+}
+
+.product-departure-component .row-attr .input-type-hotel-wrapper .notice {
+    font-size: 10px;
+
+    color: #999;
+
+    position: absolute;
+    bottom:  -20px;
+    left:     15px;
+
+    display:      block;
+    width:        95%;
+    margin-left: -10px;
+
+    text-align: left;
+
+    overflow:      hidden;
+    white-space:   nowrap;
+    text-overflow: ellipsis;
+}
+
+.cms-subgroup .radio,
+.cms-subgroup .checkbox {
+    line-height:   25px;
+    margin-top:    5px;
+    margin-bottom: 5px;
+    min-height:    25px;
+}
+
+.product-departure-component {
+    margin-bottom: 20px;
+}
+
+.product-departure-component:last-child {
+    margin-bottom: 0;
+}
+
+.row-component-hotel .form-group input,
+.row-component-hotel .form-group select {
+    /*padding: 6px;*/
+}
+
+.row-component-hotel .col-md-1,
+.row-component-hotel .col-md-2,
+.row-component-hotel .col-md-3,
+.row-component-hotel .col-md-4,
+.row-component-hotel .col-md-5,
+.row-component-hotel .col-md-6,
+.row-component-hotel .col-md-7,
+.row-component-hotel .col-md-8,
+.row-component-hotel .col-md-9,
+.row-component-hotel .col-md-10,
+.row-component-hotel .col-md-11,
+.row-component-hotel .col-md-12 {
+    padding-left:  10px;
+    padding-right: 10px;
+}
+
+.column-special-hotel-price {
+    width: 155px;
+}
+
+.column-special-hotel-price .input-group-addon {
+    padding: 6px;
+}
+
+.column-special-hotel-addremove {
+    width: 100px;
+}
+
+.col-special-hotel-stars,
+.col-special-hotel-nutrition {
+    width: 160px;
+}
+
+.row-component-hotel .col-special-hotel-stars .form-group select,
+.row-component-hotel .col-special-hotel-nutrition .form-group select {
+    padding: 6px 0;
+}
+
+.column-special-hotel-url {
+    width: 150px;
+}
+
+.form-group .label-spacer {
+    line-height: 22px;
+}
+
+.form-group-helper-checkbox label {
+    padding-top: 8px;
+}
+
+.row-component-hotel-wrapper {
+    margin-bottom: 0;
+    padding: 3px 0;
+}
+
+.row-component-hotel-wrapper.hotel-expired {
+    background: #fcc;
+}
+
+.row-component-hotel-wrapper .form-group {
+    margin-bottom: 0;
+}
+
+.row-component-hotel-wrapper .form-group .notice a {
+    font-size: 11px;
+}
+
+.row-component-departure-date .checkbox {
+    margin-top: 28px;
+}
+
+.row-component-hotel-wrapper .form-input-name label.name-label {
+    margin-left: 25px;
+}
+
+.row-component-hotel-wrapper .form-input-name .input-special-hotel-name {
+    width: 240px;
+    margin-left: 25px;
+}
+
+.row-component-hotel-wrapper .form-input-name label.iteration-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.row-component-hotel-wrapper .hotel-iteration-id {
+    position: absolute;
+    top:      5px;
+    left:     0;
+}
+
+.row-component-hotel-wrapper .form-input-name .notice {
+    margin-left: 25px;
+}

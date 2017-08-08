@@ -1,0 +1,38 @@
+# Protect hidden files from being viewed
+<Files .*>
+    Order Deny,Allow
+    Deny From All
+</Files>
+Options -Indexes
+<IfModule mod_rewrite.c>
+    # Turn on URL rewriting
+    RewriteEngine on
+
+    # Installation directory
+    RewriteBase /
+
+	###RewriteCond %{HTTP_HOST} ^moihottur.ru
+	###RewriteRule (.*) http://www.moihottur.ru/$1 [R=301,L]
+    # Rewrite www.domain.com -> domain.com -- used with SEO Strict URLs plugin
+    #RewriteCond %{HTTP_HOST} .
+    #RewriteCond %{HTTP_HOST} !^domain\.com [NC]
+    #RewriteRule (.*) http://domain.com/$1 [R=301,L]
+    #
+    # or for the opposite domain.com -> www.domain.com use the following
+    # DO NOT USE BOTH
+    #
+    #RewriteCond %{HTTP_HOST} .
+    #RewriteCond %{HTTP_HOST} !^www\.domain\.com [NC]
+    #RewriteRule (.*) http://www.domain.com/$1 [R=301,L]
+
+    # Allow any files or directories that exist to be displayed directly 
+    RewriteCond %{REQUEST_FILENAME} -d [OR]
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteRule .* - [L]
+
+    RewriteCond %{REQUEST_URI} ^/static/* [NC]
+    RewriteRule .* - [L]
+
+    # Rewrite all other URLs to index.php
+    RewriteRule .* index.php [L,QSA]
+</IfModule>

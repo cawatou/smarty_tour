@@ -1,0 +1,57 @@
+.cmsBox {
+    font-size: 12px;
+}
+.cmsBox-actions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.cmsBox-status {
+    position: absolute;
+    top: 32px;
+    right: 10px;
+    color: #999;
+    font-weight: bold;
+}
+
+.cmsBox-status a {
+    text-decoration: none;
+}
+
+.cmsBox-status-disabled a {
+    color: #B94A48
+}
+
+.cmsBox-status-disabled a:hover {
+    color: #999;
+}
+
+.cmsBox-status-enabled a {
+    color: #999;
+}
+
+.cmsBox-status-enabled a:hover {
+    color: #B94A48;
+}
+
+ul.cmsBoxImageList {
+    overflow: hidden;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.cmsBoxImageList li {
+    width: 100px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 15px;
+    padding-top: 60px;
+}
+
+ul.cmsBoxImageList .truncate {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: help;
+}

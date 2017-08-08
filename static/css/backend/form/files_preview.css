@@ -1,0 +1,8 @@
+.cropTable {
+    border-collapse: collapse;
+}
+.cropTable td {
+    border: 1px solid #ccc;
+    padding: 7px 10px;
+    background: #fff;
+}
