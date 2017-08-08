@@ -18,10 +18,10 @@
     
      {addnewtours departure={getcityId} mazafaka=$mazafaka}
 
-    
+
 
     {foreach $tours.tours as $tour}
-		
+
         <li>
             <a href="{$tour->getUrl()|escape}" class="tour" onmouseout="this.style.background = '#FFF'" onMouseover="this.style.background = '#FF9'">
                 <span class="tour-country">

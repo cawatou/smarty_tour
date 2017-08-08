@@ -1,4 +1,4 @@
-<div class="display-styles clearfix">
+<!--div class="display-styles clearfix">
     <ul>
         <li{if empty($display_style) || $display_style == 'THUMB'} class="active"{/if}>
             <a href="?display_style=THUMB">
@@ -12,7 +12,7 @@
             </a>
         </li>
     </ul>
-</div>
+</div-->
 
 
 {foreach $list as $fromId => $tours}

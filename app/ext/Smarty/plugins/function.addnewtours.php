@@ -70,7 +70,8 @@ function smarty_function_addnewtours($params, &$smarty)
         $result= mysqli_query($link,'SELECT * FROM  `b_iblock_section` WHERE  `IBLOCK_ID` =20 AND `NAME` LIKE  "%'.$city.'%"' );
    
        while ($row=mysqli_fetch_array($result))
-       { 
+       {
+            $imageDir = $imageName = '';
             $imageID = 0;
 
             $toCountry = explode('(', explode(' - ', $row['NAME'])[1])[0];
@@ -146,8 +147,11 @@ function smarty_function_addnewtours($params, &$smarty)
                            
                         ?>
                    </span>
-   
-                   <span class="tour-image" style="background-image: url(http://tour.skipodevelop.com/upload/<? echo $imageDir.'/'.$imageName; ?>); background-size: cover" >
+                   <?
+                   
+                   if(isset($imageDir) && isset($imageName)) $img_src = 'http://tour.skipodevelop.com/upload/'.$imageDir.'/'.$imageName;
+                   if($imageDir == '' && $imageName == '') $img_src = 'http://old.tour.skipodevelop.com/static/thumbs/tours/150x94/znachok-seil.jpg';?>
+                   <span class="tour-image fdasgfasgas" style="background-image: url(<?echo $img_src?>); background-size: cover" >
                       
    
                        
