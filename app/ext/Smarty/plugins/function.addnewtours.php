@@ -156,7 +156,7 @@ function smarty_function_addnewtours($params, &$smarty)
    
                        
    
-                       <span class="tour-price">от <? echo $priceFrom; ?> р.</span>
+                       <span class="tour-price">от <? echo floor($priceFrom / 100) * 100; ?> р.</span>
                    </span>
                </a>
            </li>
